@@ -8,7 +8,7 @@
   <title>Register</title>
 </head>
 <body class="bg-black flex items-center justify-center w-full h-screen">
-  <form method="post" action="{{ url_for('register_page')}}" class="bg-zinc-900/75 rounded-xl p-4 text-white w-[400px] h-[500px]">
+  <form method="post" action="{{ url_for('process_registeration_data') }}" class="bg-zinc-900/75 rounded-xl p-4 text-white w-[400px] h-[500px]">
 
     {{ form.hidden_tag() }}
     {{ form.csrf_token }}  
@@ -16,8 +16,8 @@
     <h1 class="inline-flex w-full items-center justify-center text-3xl mt-4 font-bold">REGISTER</h1>  
 
     <div class="flex flex-col mt-[30px] gap-2">
-      {{ form.email.label(class_="capitalize font-bold")}} 
-      {{ form.email(class="bg-white text-black outline-none pl-2 py-2 text-lg rounded-xl") }}
+      {{ form.name.label(class_="capitalize font-bold")}} 
+      {{ form.name(class="bg-white text-black outline-none pl-2 py-2 text-lg rounded-xl") }}
     </div>
   
     <div class="flex flex-col mt-[30px] gap-2">
