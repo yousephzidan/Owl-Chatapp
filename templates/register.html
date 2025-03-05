@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script differ src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script differ src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body class="bg-black flex items-center justify-center w-full h-screen">
+  <form method="post" action="{{ url_for('register_page')}}" class="bg-zinc-900/75 rounded-xl p-4 text-white w-[400px] h-[500px]">
+
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}  
+    
+    <h1 class="inline-flex w-full items-center justify-center text-3xl mt-4 font-bold">REGISTER</h1>  
+
+    <div class="flex flex-col mt-[30px] gap-2">
+      {{ form.email.label(class_="capitalize font-bold")}} 
+      {{ form.email(class="bg-white text-black outline-none pl-2 py-2 text-lg rounded-xl") }}
+    </div>
+  
+    <div class="flex flex-col mt-[30px] gap-2">
+      {{ form.email.label(class_="capitalize font-bold")}} 
+      {{ form.email(class="bg-white text-black outline-none pl-2 py-2 text-lg rounded-xl") }}
+    </div>
+
+    <div class="flex flex-col mt-[30px] gap-2">
+      {{ form.password.label(class_="capitalize font-bold")}} 
+      {{ form.password(class="bg-white text-black outline-none pl-2 py-2 text-lg rounded-xl") }}
+    </div>
+
+    <div class="flex gap-4 mt-[40px] items-center">
+      {{ form.submit(class="cursor-pointer bg-white px-8 py-1 rounded text-black font-bold text-lg w-[50%]") }} 
+      <label class="text-cyan-200">Have an account? Login</label>
+    </div>
+    
+     
+  </form>
+</body>
+</html>
